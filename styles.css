@@ -289,6 +289,18 @@ section.hero-board {
   margin-bottom: 100px;
 }
 
+
+
+.mountain-icon{
+  background-color: #0077FF;
+  width: 15%;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -170px;
+  right: 500px;
+}
+
 .left-cont{
   display: flex;
   flex-direction: column;
@@ -297,7 +309,7 @@ section.hero-board {
 }
 .right-image{
   width: 500px;
-  border-radius: 5px ;
+  border-radius: 15px ;
 }
 
 h4{
@@ -366,6 +378,13 @@ form input{
   font-size: 16px;
 }
 
+
+.newsletter{
+  color: #fff;
+  font-weight: bold;
+  
+}
+
 ::placeholder{
   color: #fff;
   font-weight: bold;
@@ -391,7 +410,7 @@ form button{
 
 }
 
-i, #facebook{
+i, #socials-icon{
   padding: 10px;
   margin-top: 20px;
 }
@@ -520,24 +539,30 @@ h3{
   .right-image {
     width: 100%; /* Adjust image width to fit screen */
     max-width: none; /* Reset max-width for the image */
+    margin-top: 50px;
+  }
+
+  .mountain-icon{
+    background-color: #0077FF;
+    width: 15%;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    
   }
 
   .left-cont-text {
-    text-align: center; /* Center text in mobile and tablet devices */
+    text-align: start; /* Center text in mobile and tablet devices */
   }
 
   .buttonLink {
     flex-basis: 100%; /* Full width for buttons in mobile and tablet */
+    margin-bottom: 20px;
   }
 
   .wrapper {
-    height: auto; /* Adjust the wrapper height for content */
+    height: 50vh; /* Adjust the wrapper height for content */
   }
-
-  .wraper-content {
-    flex-direction: column; /* Stack content vertically */
-  }
-
 
 
   .wraper-content {
@@ -545,35 +570,47 @@ h3{
     align-items: center; /* Center content horizontally */
   }
 
+  .wrapper-for-email{
+    width: 90%;
+  }
+
   form {
     width: 100%; /* Full width for the form container */
-    display: block; /* Change to block-level element to take full width */
+     /* Change to block-level element to take full width */
+    
   }
 
   form input {
     width: 100%; /* Full width for form input */
     max-width: none; /* Reset max-width */
-    border-radius: 10px; /* Adjust border-radius to match the design */
+    border-radius: 10px 0px 0px 10px;
+     /* Adjust border-radius to match the design */
     margin-bottom: 10px; /* Add margin for spacing between input and button */
   }
 
   form button {
-    width: 100%; /* Full width for the button */
+     /* Full width for the button */
     max-width: none; /* Reset max-width */
-    border-radius: 10px; /* Adjust border-radius to match the design */
+  /* Adjust border-radius to match the design */
+    border-radius: 0px 10px 10px 0px;
   }
 
   .socials {
     display: flex;
-    flex-direction: row; /* Align social icons horizontally */
+    flex-direction: column; /* Align social icons horizontally */
+    align-items: center;
     justify-content: center; /* Center social icons horizontally */
     left: 0; /* Reset left position */
   }
 
   i,
-  #facebook {
+  #socials-icon {
     padding: 10px;
     margin-top: 0; /* Remove margin top */
+  }
+
+  .socials-icon {
+    width: 50px;
   }
 
   .follow-us {
@@ -589,14 +626,16 @@ h3{
   }
 
   .copyright {
-    margin-top: 20px; /* Adjust the margin for spacing */
+    position: relative;
+    top: 70px;
+    
   }
 
   .footer-logo,
   .copyright,
   .footer-text {
-    display: block; /* Change to block-level elements for stacking */
-    margin: 0 auto; /* Center align each element */
+    display: flex; /* Change to block-level elements for stacking */
+    margin: 0px auto; /* Center align each element */
     text-align: center; /* Center the text */
   }
 }
