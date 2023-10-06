@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  max-width: 100;
+  margin: auto;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+
+nav .logo img{
+    width: 100px;
+    height: auto;
+    padding: 10px;
+}
+
+
+
+
+
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #120a0a;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+/*Media query to make the navbar responsive on tablet and mobile device without js only css*/
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+/*Media query to make the navbar responsive on tablet and mobile device without js only css ends here.*/
+
+
+
+section.hero-board {
+  height: 75vh;
+  width: 100%;
+  background-image: url(image/assets/img/gro├ƒglockner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.board-text2{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+.smallButton {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  background: #007BFF;
+  display: inline-block;
+  outline: none;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+
+
+
+.side-box{
+  position: fixed;
+  top: 30%;
+  right: 0;
+  
+  
+}
+
+.call-icon{
+  background-color: #0077FF;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+  
+}
+
+.mail-icon{
+  background-color: #0077FF;
+  padding: 20px;
+  
+}
+
+
+
+
+
+/*div for main container.*/
+
+.main-container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  
+}
+
+
+.text-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-title-text {
+
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+}
+
+.main-paragraph-text {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.main-image-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  
+  background-position: center;
+  background-size: cover;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image1{
+  background-image: url(image/assets/img/mtcook.jpg);
+}
+.image2{
+  background-image: url(image/assets/img/weisshorn.jpg);
+}
+.image3{
+  background-image: url(image/assets/img/alpamayo.jpg);
+}
+.image4{
+  background-image: url(image/assets/img/gro├ƒglockner.jpg);
+}
+.image5{
+  background-image: url(image/assets/img/aconcagua.jpg);
+}
+.image6{
+  background-image: url(image/assets/img/lhotse.jpg);
+}
+
+
+.image-card-caption{
+  text-align: start;
+  margin-top: 150px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+/* Flexbox layout for the new section */
+.container-new-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.left-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.right-image{
+  width: 500px;
+  border-radius: 5px ;
+}
+
+h4{
+  font-size: 2rem;
+  padding: 20px 0;
+}
+.left-cont-text{
+  text-align: start;
+}
+
+.buttonLink {
+  flex-basis: 30%; /* Adjust the width as needed */
+  height: 10%;
+  padding: 20px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttonLink:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+.wrapper{
+  max-width: 100vw;
+  margin: 0 auto;
+  background-color: #007BFF;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  
+}
+
+.wraper-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+
+
+form{
+  display: flex;
+  width: fit-content;
+  color: black;
+}
+
+
+form input{
+  background-color: #007BFF;
+  border: 2px solid #fff;
+  border-radius: 10px 0px 0px 10px;
+  color: black;
+  outline: none;
+  padding: 10px 20px;
+  height: 70px;
+  width: 400px;
+  font-size: 16px;
+}
+
+::placeholder{
+  color: #fff;
+  font-weight: bold;
+}
+
+form button{
+  background-color: #fff;
+  border: none;
+  outline: none;
+  height: 70px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+  
+}
+
+.socials{
+  display:flex ;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  left: 80px;
+
+}
+
+i, #facebook{
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+.follow-us{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+
+
+
+
+/*footer style*/
+
+
+footer {
+  width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #120a0a;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Style for the image logo */
+.footer-logo {
+  display: inline-block;
+  margin-right: auto;
+}
+
+/* Style for the copyright name */
+.copyright {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+/* Style for the 2-word text */
+.footer-text {
+  display: flex;
+  flex-direction: row;
+}
+
+h3{
+  padding: 10px;
+}
+
+.copyright{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .board-text2{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero-content{
+    margin-bottom: 250px;
+  }
+  .smallButton{
+    margin-top: 20px;
+  }
+
+  .text-content{
+    align-items: start;
+    padding: 40px 0;
+    
+  }
+  
+  
+  .main-paragraph-text{
+    text-align: start;
+  }
+
+
+  
+
+  .image-card-container {
+    flex-direction: column; /* Stack image cards vertically */
+    align-items: center; /* Center align the image cards */
+  }
+
+  .image-card {
+    width: 100%; /* Full width for image cards */
+    max-width: none; /* Reset max-width */
+    margin-bottom: 20px; /* Add margin for spacing between image cards */
+    height: 300px;
+  }
+
+  .image-card-caption {
+    text-align: start; /* Center text on mobile and tablet devices */
+    margin-top: 50%; /* Adjust margin for spacing */
+  }
+  
+  
+  
+
+
+
+
+
+
+  /* Reset styles for mobile and tablet devices */
+  .container-new-section {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+  }
+
+  .right-image {
+    width: 100%; /* Adjust image width to fit screen */
+    max-width: none; /* Reset max-width for the image */
+  }
+
+  .left-cont-text {
+    text-align: center; /* Center text in mobile and tablet devices */
+  }
+
+  .buttonLink {
+    flex-basis: 100%; /* Full width for buttons in mobile and tablet */
+  }
+
+  .wrapper {
+    height: auto; /* Adjust the wrapper height for content */
+  }
+
+  .wraper-content {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+
+
+  .wraper-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+
+  form {
+    width: 100%; /* Full width for the form container */
+    display: block; /* Change to block-level element to take full width */
+  }
+
+  form input {
+    width: 100%; /* Full width for form input */
+    max-width: none; /* Reset max-width */
+    border-radius: 10px; /* Adjust border-radius to match the design */
+    margin-bottom: 10px; /* Add margin for spacing between input and button */
+  }
+
+  form button {
+    width: 100%; /* Full width for the button */
+    max-width: none; /* Reset max-width */
+    border-radius: 10px; /* Adjust border-radius to match the design */
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: row; /* Align social icons horizontally */
+    justify-content: center; /* Center social icons horizontally */
+    left: 0; /* Reset left position */
+  }
+
+  i,
+  #facebook {
+    padding: 10px;
+    margin-top: 0; /* Remove margin top */
+  }
+
+  .follow-us {
+    text-align: center; /* Center text in mobile and tablet devices */
+  }
+
+
+
+  footer {
+    width: 100%; /* Full width for the footer */
+    height: auto; /* Adjust the height for content */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .copyright {
+    margin-top: 20px; /* Adjust the margin for spacing */
+  }
+
+  .footer-logo,
+  .copyright,
+  .footer-text {
+    display: block; /* Change to block-level elements for stacking */
+    margin: 0 auto; /* Center align each element */
+    text-align: center; /* Center the text */
+  }
+}
+
+
+/*.wrapper .btn-1{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  color: #664AFF;
+  background: #fff;
+  line-height: 60px;
+  font-size: 27px;
+  font-weight: 500;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+  transition: 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .btn-1:active{
+  transform: scale(0.9);
+}
+#click:checked ~ .btn-1{
+  height: 40px;
+  width: 100px;
+  opacity: 0;
+  pointer-events: none;
+}
+.wrapper .field{
+  height: 100%;
+  width: 0%;
+  opacity: 0;
+  pointer-events: none;
+  position: relative;
+  transition: 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#click:checked ~ .field{
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .field input{
+  height: 100%;
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0 130px 0 15px;
+  font-size: 20px;
+  outline: none;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+}
+.wrapper .field input::placeholder{
+  color: #999;
+  font-size: 18px;
+}
+.wrapper .field .btn-2{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  line-height: 40px;
+  background: #664AFF;
+  height: 40px;
+  width: 100px;
+  user-select: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wrapper .field .btn-2:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper #click{
+  display: none;
+}
+
